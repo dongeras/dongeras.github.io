@@ -1,54 +1,86 @@
 <!DOCTYPE html>
 <head>
+	<link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
 	<title>Don Geras</title>
 	<style>
-		img {
-			width: 300px;
-		}
-		
-		body {
+		header {
 			text-align: center;
 			background: url("board-2167844_1920.jpg");
 			background-size: cover;
-			background-position: center;
+			color: white;
 		}
+		img {
+			width: 300px;
+			margin: 40px 0px 0px 0px;
+			border: 7px solid white;
+			border-radius: 20px;
+		}
+
+		ul{
+			padding: 10px;
+			background: rgba(0,0,0,0.2);
+		}
+
+		li{
+			display: inline;
+			padding: 0px 10px 0px 10px;
+		}
+
+		article{
+			max-width: 500px;
+			padding: 20px;
+			margin: 0 auto;
+		}
+		
 
 		h1 {
-			border: 2px dashed white;
-			color: white
+			font-size: 70px;
 		}
 
-		p {
-			color: white;
-			font-size: 22px;
-		}
+		@media (max-width: 500px) {
+			h1 {
+				font-size: 36px;
+				padding: 5px;
+			}
+			li {
+				padding: 5px;
+				display: block;
+			}
 
-		input{
-			padding: 50px:
-		}
-
-		input[type="submit"]{
-			background: red;
-			color: white;
 		}
 	</style>
 </head>
 
 <body>
-	<h1> Blog de Don Geras </h1>
-	<img  src="foto.jpeg">	
+	<header>
+		<img  src="foto.jpeg">
+		<h1> Blog de Don Geras </h1>
+		<ul>
+			<li><a href="#">Sobre mi</a></li>
+			<li><a href="#">Física</a></li>
+			<li><a href="#">Otro</a></li>
+		</ul>
+	</header>
+	<article>
+		<h2> Texto Lorem-Ipsum original </h2>
+		<p> 
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<button>Me gusta</button>
+	</article>
 
-	<p>
-
-		Soy Gerardo Rivas Álvarez, un físico de la Ciudad de México.
-
-	</p>
-
-	<p> 
-		Estoy interesado en aprender desarrollo web para publicar diferentes simulaciones de física.
-	</p>
-
-	<input type="email" placeholder="Escribe tu correo">
-
-	<input type="submit">
+	<article>
+		<h2> Sección 1.10.33 de "de Finibus Bonorum et Malorum", escrito por Cicero en el 45 A.C. </h2>
+		<p> 
+			At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+		</p>
+		<button>Me gusta</button>
+	</article>
+	<script>
+		$("button").on("click", function() {
+			alert("Te gusta!");
+		});
+	</script>
 </body>
+
+
