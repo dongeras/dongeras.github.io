@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
 	<title>Don Geras</title>
 	<style>
@@ -80,7 +81,9 @@
 		<button>Me gusta</button>
 	</article>
 	<script>
-		alert("hola, mundo!");
+		$("button").on("click", function(){
+			alert("Gracias!");
+		});
 	</script>
 </body>
 
